@@ -14,8 +14,12 @@
       (zero? (mod n divisor)) true
       :else false))
 
-(defn fizzbuzz [n]
-  ":(")
+(defn fizbuzz? [n]
+  (cond
+      (and (zero? (mod n 3)) (zero? (mod n 5))) "fizzbuzz"
+      (zero? (mod n 3)) "fizz"
+      (zero? (mod n 5)) "buzz"
+      :else ""))
 
 (defn teen? [age]
   (if (<= 13 age 19))
